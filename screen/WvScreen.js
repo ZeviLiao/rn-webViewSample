@@ -1,10 +1,15 @@
-import React from 'react';
-import { View , Text} from 'react-native';
+import React, { Component } from 'react';
+import { WebView } from 'react-native-webview';
 
-export default function componentName() {
-  return (
-    <View>
-      <Text>Hello</Text>
-     </View>
-  );
+class MyWeb extends Component {
+  render() {
+    return (
+      <WebView
+        source={{ uri: 'https://www.google.com' }}
+        style={{ marginTop: 20 }}
+      />
+    );
+  }
 }
+
+export default MyWeb
