@@ -5,7 +5,7 @@ class MyWeb extends Component {
   render() {
     return (
       <WebView
-        source={{ uri: 'https://www.google.com' }}
+        source={{ uri: 'http://127.0.0.1:3000' }}
         style={{ marginTop: 20 }}
       />
     );

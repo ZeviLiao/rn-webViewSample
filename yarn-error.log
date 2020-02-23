@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/zeviliao/.nvm/versions/node/v10.16.2/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add react-native-webview
+  /Users/zeviliao/.nvm/versions/node/v10.16.2/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add react-native-expanding-collection
 
 PATH: 
   /Users/zeviliao/.nvm/versions/node/v10.16.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/zeviliao/Library/Android/sdk/tools:/Users/zeviliao/Library/Android/sdk/platform-tools
@@ -14,12 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/zeviliao/lab/expo/wvSample/package.json: Unexpected token } in JSON at position 402
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:1631:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:304:30)
-      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:315:13
+  Error: https://registry.yarnpkg.com/react-native-expanding-collection: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:65894:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129018:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129990:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
 
 npm manifest: 
   {
@@ -36,6 +41,8 @@ npm manifest:
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+      "react-native-web": "~0.11.7",
+      "react-native-webview": "^8.1.0"
     },
     "devDependencies": {
       "@babel/core": "^7.0.0",
