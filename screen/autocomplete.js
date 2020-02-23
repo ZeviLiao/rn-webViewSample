@@ -34,7 +34,8 @@ class AutocompleteExample extends Component {
       .then(res => res.json())
       .then(json => {
         const { results: films } = json;
-        this.setState({ films });
+        let fakefilms = films.concat(films).concat(films).concat(films).concat(films)
+        this.setState({ films: fakefilms });
       });
   }
 
@@ -97,7 +98,8 @@ const styles = StyleSheet.create({
   autocompleteContainer: {
     // marginLeft: 10,
     // marginRight: 10
-    flex: 1,
+    //flex: 1,
+    maxHeight: 100,
     left: 0,
     position: "absolute",
     right: 0,
