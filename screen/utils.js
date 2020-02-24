@@ -1,8 +1,11 @@
 export const minDate = new Date(2015, 8, 15, 10, 30, 0);
-export const maxDate = new Date(2018, 1, 1, 23, 49, 59);
+export const maxDate = new Date(2025, 1, 1, 23, 49, 59);
 export let now = new Date();
 
-export const cn = typeof location !== 'undefined' ? location.search.indexOf('cn') !== -1 : false;
+export const cn =
+  typeof location !== "undefined"
+    ? location.search.indexOf("cn") !== -1
+    : false;
 if (cn) {
   now = new Date();
 } else {
