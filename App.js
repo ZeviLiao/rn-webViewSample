@@ -4,11 +4,12 @@ import WvScreen from "./screen/WvScreen";
 import Expand from "./screen/expand";
 import AutoComp from "./screen/autocomplete";
 import DtPicker from "./screen/datePicker";
+import DtPickerPop from "./screen/datePickerPop";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <DtPicker />
+      <DtPickerPop />
     </View>
   );
 }
