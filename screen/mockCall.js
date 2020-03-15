@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import axios from "axios";
 import { getUser } from "./api/user";
-
 import "./api/mock-ax";
 
 // create a component
@@ -21,9 +20,12 @@ const MackCall = () => {
     const fetchData = async () => {
       console.log("hello");
       try {
-        const result = await getUser(1)
-        console.log(result);
-        setData(result);
+        // const result = await getUser(1);
+        const result = await axios(
+          "https://jsonplaceholder.typicode.com/todos/1"
+        );
+        console.log(result.data);
+        setData(result.data);
       } catch (error) {
         console.log(error);
       }
