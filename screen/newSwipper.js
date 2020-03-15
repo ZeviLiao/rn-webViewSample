@@ -4,7 +4,16 @@ import Carousel from "react-native-carousel-control";
 
 export default function newSwipper() {
   return (
-    <Carousel pageStyle={{ flex: 1, backgroundColor: "yellow", borderRadius: 5 }}>
+    <Carousel
+      pageStyle={{ flex: 1, backgroundColor: "yellow", borderRadius: 5 }}
+      swipeThreshold={.1}
+    >
+      <Text>Hello</Text>
+      <Text>World!</Text>
+      <Text>From carousel</Text>
+      <Text>Hello</Text>
+      <Text>World!</Text>
+      <Text>From carousel</Text>
       <Text>Hello</Text>
       <Text>World!</Text>
       <Text>From carousel</Text>

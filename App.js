@@ -6,11 +6,12 @@ import AutoComp from "./screen/autocomplete";
 import DtPicker from "./screen/datePicker";
 import DtPickerPop from "./screen/datePickerPop";
 import NewSwipper from "./screen/newSwipper";
+import MockCall from "./screen/mockCall";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <NewSwipper />
+      <MockCall />
     </View>
   );
 }
