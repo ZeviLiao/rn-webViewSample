@@ -10,18 +10,25 @@ import {
 import axios from "axios";
 // import { getInfo } from "../apis/user";
 
+import "./mock";
+
 // create a component
 const MackCall = () => {
   const [data, setData] = useState({});
   const [search, setSearch] = useState("redux");
 
-//   https://jsonplaceholder.typicode.com/todos/1
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(
-        "https://jsonplaceholder.typicode.com/todos/1"
-      );
-      setData(result.data);
+      console.log("hello");
+      try {
+        const result = await axios(
+          "https://jsonplaceholder.typicode.com/todos/1"
+        );
+        console.log(result.data);
+        setData(result.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchData();
   }, [search]);
