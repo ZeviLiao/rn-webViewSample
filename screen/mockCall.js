@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 // import { getInfo } from "../apis/user";
 
-import "./mock";
+import "./mock-ax";
 
 // create a component
 const MackCall = () => {
@@ -24,8 +24,8 @@ const MackCall = () => {
         const result = await axios(
           "https://jsonplaceholder.typicode.com/todos/1"
         );
-        console.log(result.data);
-        setData(result.data);
+        console.log(result.data.users[0]);
+        setData(result.data.users[0]);
       } catch (error) {
         console.log(error);
       }
