@@ -11,6 +11,7 @@ import axios from "axios";
 // import { getInfo } from "../apis/user";
 
 import "./mock-ax";
+// import "./mock";
 
 // create a component
 const MackCall = () => {

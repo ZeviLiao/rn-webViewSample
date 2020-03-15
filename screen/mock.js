@@ -7,6 +7,6 @@ import Mock from "mockjs";
 export default Mock.mock(/\/todos\/1/, "get", {
   id: 1,
   user: "a",
-  title: "title",
+  title: "title1",
   "password|1-100": 100
 });
