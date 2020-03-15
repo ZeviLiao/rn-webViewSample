@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '../utils/request'
 
 
 export function login(data) {
@@ -12,8 +12,7 @@ export function login(data) {
 export function getInfo(userId = '1') {
   return request({
     url: `/todos/${userId}`,
-    method: 'get',
-    params: { token }
+    method: 'get'
   })
 }
 

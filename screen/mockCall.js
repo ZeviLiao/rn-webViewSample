@@ -8,44 +8,38 @@ import {
   TextInput
 } from "react-native";
 import axios from "axios";
+// import { getInfo } from "../apis/user";
 
 // create a component
 const MackCall = () => {
-  const [data, setData] = useState({ hits: [] });
-//   const [query, setQuery] = useState("redux");
-//   const [search, setSearch] = useState("redux");
+  const [data, setData] = useState({});
+  const [search, setSearch] = useState("redux");
+
+//   https://jsonplaceholder.typicode.com/todos/1
   useEffect(() => {
     const fetchData = async () => {
-      console.log("hello");
       const result = await axios(
-        "https://hn.algolia.com/api/v1/search?query=redux"
-        // `http://hn.algolia.com/api/v1/search?query=${search}`
-        // `http://hn.algolia.com/api/v1/search?query=${query}`
+        "https://jsonplaceholder.typicode.com/todos/1"
       );
       setData(result.data);
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text></Text>
       <Text></Text>
-      <TextInput
-        style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
-        onChangeText={text => setQuery(text)}
-      />
+      <TextInput style={{ height: 40, borderColor: "gray", borderWidth: 1 }} />
 
-      <TouchableOpacity onPress={() => setSearch(query)}>
+      <TouchableOpacity onPress={() => setSearch(search)}>
         <Text>Search</Text>
       </TouchableOpacity>
-
-      <View style={styles.container}>
-        {data.hits.map(item => (
-          <View key={item.objectID}>
-            <Text>{item.title}</Text>
-          </View>
-        ))}
+      <Text>hello</Text>
+      <View>
+        <View key={data.userId}>
+          <Text>{data.title}</Text>
+        </View>
       </View>
     </View>
   );
@@ -55,9 +49,9 @@ const MackCall = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#eee"
+    // justifyContent: "center",
+    // alignItems: "center",
+    backgroundColor: "#2c3e50"
   }
 });
 
