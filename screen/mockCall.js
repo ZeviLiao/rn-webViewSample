@@ -8,10 +8,9 @@ import {
   TextInput
 } from "react-native";
 import axios from "axios";
-// import { getInfo } from "../apis/user";
+import { getUser } from "./api/user";
 
-import "./mock-ax";
-// import "./mock";
+import "./api/mock-ax";
 
 // create a component
 const MackCall = () => {
@@ -22,11 +21,9 @@ const MackCall = () => {
     const fetchData = async () => {
       console.log("hello");
       try {
-        const result = await axios(
-          "https://jsonplaceholder.typicode.com/todos/1"
-        );
-        console.log(result.data.users[0]);
-        setData(result.data.users[0]);
+        const result = await getUser(1)
+        console.log(result);
+        setData(result);
       } catch (error) {
         console.log(error);
       }
