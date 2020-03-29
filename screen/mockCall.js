@@ -20,12 +20,12 @@ const MackCall = () => {
     const fetchData = async () => {
       console.log("hello");
       try {
-        // const result = await getUser(1);
-        const result = await axios(
-          "https://jsonplaceholder.typicode.com/todos/1"
-        );
-        console.log(result.data);
-        setData(result.data);
+        const result = await getUser(1);
+        // const result = await axios(
+        //   "https://jsonplaceholder.typicode.com/todos/1"
+        // );
+        // console.log(result);
+        setData(result);
       } catch (error) {
         console.log(error);
       }
@@ -44,7 +44,7 @@ const MackCall = () => {
       </TouchableOpacity>
       <Text>hello</Text>
       <View>
-        <View key={data.userId}>
+        <View key={data.title}>
           <Text>{data.title}</Text>
         </View>
       </View>
