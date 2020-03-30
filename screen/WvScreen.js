@@ -5,15 +5,16 @@ import { Alert } from "react-native";
 class MyWeb extends Component {
   render() {
     handleMessage = evt => {
-      console.log("hello");
+      // console.log("hello");
       const message = evt.nativeEvent.data;
       // alert(message)
+      Alert.alert(message);
     };
     return (
       <WebView
-        source={{ uri: "http://127.0.0.1:5500/apps/paymentBack.html" }}
+        source={{ uri: "http://api.17ezgo.com.tw/apps/paymentBack.html" }}
         style={{ marginTop: 20 }}
-        onMessage={(event)=> Alert.alert(event.nativeEvent.data) }
+        onMessage={handleMessage}
       />
     );
   }
