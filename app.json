@@ -24,7 +24,13 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.duco.wvsample"
+    },
+    "android": {
+      "package": "com.duco.wvsample",
+      "versionCode": 1
+    },
+    "description": ""
   }
 }

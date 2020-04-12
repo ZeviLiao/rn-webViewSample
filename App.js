@@ -7,11 +7,13 @@ import DtPicker from "./screen/datePicker";
 import DtPickerPop from "./screen/datePickerPop";
 import NewSwipper from "./screen/newSwipper";
 import MockCall from "./screen/mockCall";
+import ImagePickerExample from "./screen/ImagePickerExample";
+import Cdown from "./screen/cdown";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <WvScreen />
+      <Cdown seconds={120}/>
     </View>
   );
 }
