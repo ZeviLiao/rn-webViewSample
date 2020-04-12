@@ -9,11 +9,12 @@ import NewSwipper from "./screen/newSwipper";
 import MockCall from "./screen/mockCall";
 import ImagePickerExample from "./screen/ImagePickerExample";
 import Cdown from "./screen/cdown";
-
+import PermissionAsk from "./screen/permissionAsk";
+/*<Cdown seconds={120}/>*/
 export default function App() {
   return (
     <View style={styles.container}>
-      <Cdown seconds={120}/>
+      <PermissionAsk/>
     </View>
   );
 }
