@@ -20,7 +20,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-autocomplete-input": "^4.1.0",
     "react-native-carousel-control": "^2.0.1",
-    "react-native-code-push": "^6.1.0",
+    "react-native-code-push": "^7.0.5",
     "react-native-countdown-component": "^2.7.1",
     "react-native-google-places-autocomplete": "^1.4.1",
     "react-native-view-more-text": "^2.1.0",
